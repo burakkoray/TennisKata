@@ -16,6 +16,7 @@ class TennisPlayer {
         case Thirty
         case Forty
         case Advantage
+        case Win
         
         mutating func next(){
             self = Score(rawValue: rawValue + 1) ?? Score(rawValue: 0)!
@@ -23,6 +24,7 @@ class TennisPlayer {
     }
     
     var score: Score = Score.Love
+    var oppenentScore : Score = Score.Love
     let name : String
     
     init(name: String) {
