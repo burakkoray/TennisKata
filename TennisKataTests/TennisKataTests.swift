@@ -11,23 +11,71 @@ import XCTest
 
 class TennisKataTests: XCTestCase {
 
+    let tennisGame = TennisGame()
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+        let tennisPlayer1 : TennisPlayer = TennisPlayer(name: "Kim Clijsters")
+        let tennisPlayer2 : TennisPlayer = TennisPlayer(name: "Justine Henin-Hardenne")
+
+        tennisGame.player1 = tennisPlayer1
+        tennisGame.player2 = tennisPlayer2
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testPlayer(){
+    func testDeuceGame(){
         
+        tennisGame.player1Scores()
+        tennisGame.player2Scores()
+        tennisGame.player2Scores()
+        tennisGame.player2Scores()
+        tennisGame.player1Scores()
+        tennisGame.player1Scores()
+
+        XCTAssertEqual(tennisGame.player1.score, tennisGame.player2.score)
+        
+    }
+    
+    func testWinGame(){
+        
+        tennisGame.player1Scores()
+        tennisGame.player2Scores()
+        tennisGame.player2Scores()
+        tennisGame.player2Scores()
+        tennisGame.player1Scores()
+        tennisGame.player1Scores()
+        tennisGame.player1Scores()
+        tennisGame.player1Scores()
+
+        XCTAssertEqual(tennisGame.player1.score, TennisPlayer.Score.Win)
+    
+    }
+
+    func testAdvantageGame(){
+        
+        tennisGame.player1Scores()
+        tennisGame.player2Scores()
+        tennisGame.player2Scores()
+        tennisGame.player2Scores()
+        tennisGame.player1Scores()
+        tennisGame.player1Scores()
+        tennisGame.player1Scores()
+
+        XCTAssertEqual(tennisGame.player1.score, TennisPlayer.Score.Advantage)
+        
+        tennisGame.player2Scores()
+        tennisGame.player2Scores()
+
+        XCTAssertEqual(tennisGame.player2.score, TennisPlayer.Score.Advantage)
+
+    }
+    
+    func testPlayer(){
         let tennisPlayer : TennisPlayer = TennisPlayer.init(name: "Novak")
         
         tennisPlayer.scored()
         tennisPlayer.scored()
         
         XCTAssertEqual(tennisPlayer.score, TennisPlayer.Score.Thirty)
-        
     }
 
 }
