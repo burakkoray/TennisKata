@@ -13,6 +13,7 @@
 		7D3AA9C921CE38E000977377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3AA9C821CE38E000977377 /* Assets.xcassets */; };
 		7D3AA9CC21CE38E000977377 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3AA9CA21CE38E000977377 /* LaunchScreen.storyboard */; };
 		7D3AA9D721CE38E000977377 /* TennisKataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3AA9D621CE38E000977377 /* TennisKataTests.swift */; };
+		7D3AA9E421CE410D00977377 /* TennisPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3AA9E321CE410D00977377 /* TennisPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		7D3AA9D221CE38E000977377 /* TennisKataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TennisKataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3AA9D621CE38E000977377 /* TennisKataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TennisKataTests.swift; sourceTree = "<group>"; };
 		7D3AA9D821CE38E000977377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D3AA9E321CE410D00977377 /* TennisPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TennisPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				7D3AA9C821CE38E000977377 /* Assets.xcassets */,
 				7D3AA9CA21CE38E000977377 /* LaunchScreen.storyboard */,
 				7D3AA9CD21CE38E000977377 /* Info.plist */,
+				7D3AA9E321CE410D00977377 /* TennisPlayer.swift */,
 			);
 			path = TennisKata;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D3AA9E421CE410D00977377 /* TennisPlayer.swift in Sources */,
 				7D3AA9C421CE38DF00977377 /* ViewController.swift in Sources */,
 				7D3AA9C221CE38DF00977377 /* AppDelegate.swift in Sources */,
 			);
